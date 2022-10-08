@@ -1,11 +1,24 @@
-draw_sprite(s_e_placeholder, image_index, x, y);
+draw_self();
+if(state != "WANDER"){
+	draw_sprite_ext(s_placeholder, 0, last_x, last_y, image_xscale, image_yscale, 0, image_blend, 0.5);
+}
+if(global.debug){
+	draw_path(path, 0, 0, 1);
+	draw_circle(x, y, detection_radius, true);
 
-draw_line_color(x, y, gx, gy, c_black, c_black)
+	drawtext(x, y - 20, string(state), -1, 320, font_1, 32);
 
-draw_path(path_id, x, y, true);
+	// draw the vision cone
+	var get_line_x = x + lengthdir_x(vision_length, direction);
+	var get_line_y = y + lengthdir_y(vision_length, direction);
+	var angle = 20;
 
-draw_text_ext(x, y - 20, bool(spotted), 1, 32);
+	var line_above_x = x + lengthdir_x(vision_length, direction - angle);
+	var line_above_y = y + lengthdir_y(vision_length, direction - angle);
 
-draw_healthbar(x-0.5,y-15,x+10,y-12,hp,c_black,c_lime,c_lime,0,1,1);
+	var line_below_x = x + lengthdir_x(vision_length, direction + angle);
+	var line_below_y = y + lengthdir_y(vision_length, direction + angle);
 
-draw_line_color(x, y, enemy_nearest.x, enemy_nearest.y, enemy_in_sight ? c_red : c_green, enemy_in_sight ? c_red : c_green);
+	draw_line_color(x, y, line_above_x, line_above_y, c_red, c_red);
+	draw_line_color(x, y, line_below_x, line_below_y, c_red, c_red);
+}

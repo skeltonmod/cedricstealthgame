@@ -4,6 +4,7 @@
   "name": "CedricStealthGame",
   "resources": [
     {"id":{"name":"entity_parent","path":"objects/entity_parent/entity_parent.yy",},"order":3,},
+    {"id":{"name":"drawtext","path":"scripts/drawtext/drawtext.yy",},"order":1,},
     {"id":{"name":"c_block_16","path":"objects/c_block_16/c_block_16.yy",},"order":0,},
     {"id":{"name":"c_cedric","path":"objects/c_cedric/c_cedric.yy",},"order":0,},
     {"id":{"name":"s_camera","path":"scripts/s_camera/s_camera.yy",},"order":0,},
@@ -21,6 +22,7 @@
     {"id":{"name":"s_block_32","path":"sprites/s_block_32/s_block_32.yy",},"order":2,},
     {"id":{"name":"s_e_placeholder","path":"sprites/s_e_placeholder/s_e_placeholder.yy",},"order":2,},
     {"id":{"name":"c_blood","path":"objects/c_blood/c_blood.yy",},"order":0,},
+    {"id":{"name":"font_1","path":"sprites/font_1/font_1.yy",},"order":6,},
     {"id":{"name":"rm_dev","path":"rooms/rm_dev/rm_dev.yy",},"order":0,},
   ],
   "Options": [
@@ -67,10 +69,10 @@
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
   ],
   "TextureGroups": [
-    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","isScaled":true,"compressFormat":"bz2","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","isScaled":true,"compressFormat":"bz2","loadType":"default","directory":"","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.8.1.37",
+    "IDEVersion": "2022.9.0.49",
   },
 }

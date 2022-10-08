@@ -1,46 +1,45 @@
-// AGGRESSIVE ENEMY
-// (runs around map searching for the player, then attacks the player if sighted)
+path = path_add();
 
-// Initialize the path and store the id in a variable
-path_id = path_add()
+path_next_point = 0;
 
-// Set the variables used in the AI
-next_point = 0
-max_points = 0
-moving = 0
-dir = 0
-enemy_nearest = noone
-enemy_in_sight = 0
-enemy_angle = 0
-can_move = 0
-can_spot = 1
-can_shoot = 0
-gx = 0
-gy = 0
+px = 0;
+py = 0;
 
-// Set variables (these ones can be adjusted to taylor your AI) - fun to mess around with. Try adjusting some values.
-hp = 100                // Health
-spotted = 0             // If you make this value start on 1, then the enemy knows where you are right from the start. (he knows where you live! 0_0)
-move_speed = 1        // Self explanitory
-turn_speed = 0.15       // How fast the AI turns (its not really a speed, more of a sensitivity)
-pause_time = 20         // Minimum time that the enemy will spend to stop and look around (when not alert of player)
-max_range = 64         // AI only fires when enemy is within this range
-max_view_angle = 90     // this value is basically the angle of the view cone divided by 2. i.e. if you 360� vision, put 180
-shoot_speed = 25       // Minimum time the AI will pause for in between firing shots.
-shoot_speed_random = 10 // (random time which is added on, more means less regular shooting pattern)
-inaccuracy = 15          // we dont want the enemy being too accurate at shooting ^_^
-critical_health = 40    // (if hp gets lower or equal, then AI tries to take cover if you fire at them.
-bravery = 7             // the lower this value is, the more the AI runs away like a sissy (this is fun to mess around with)
-prec_wall_collision = 0 // shouldn't really be changed unless you know what you are doing.
-team_alert = 0          // team_alert defines whether or not one enemy can alert the rest of the team of you and your location
+movable = true;
+move_timer = 0;
+max_pause_timer = 120;
+pause_timer = max_pause_timer;
+min_move_time = 50;
+max_move_time = 100;
+move_radius = 128;
 
-// These values can be changed if your object names are different to mine. This makes putting this AI into your game alot easier. 
-// See, I think about these things. <.<
-// (if there is multiple objects for these (such as bullets), then you will have to make a parent object, and use that (Like I did with obj_block_par))
-my_enemy = c_cedric;
-wall_parent = static_parent;
-bullet = c_bullet;
-ally = c_enemy;
+input_x = 0;
+input_y = 0;
 
-// set move alarm
-alarm[1] = pause_time;
+// Last seen position
+last_x = 0;
+last_y = 0;
+
+// needed for the gameplay to work
+alert_level = 0;
+
+// The state
+state = "WANDER";
+
+move_to_point = function (_tx, _ty, CELLSIZE = 32){
+	_tx = floor(_tx / CELLSIZE) * CELLSIZE;
+	_ty = floor(_ty / CELLSIZE) * CELLSIZE;
+	_ty += CELLSIZE / 2;
+	_ty += CELLSIZE / 2;
+	
+	var can_move = mp_grid_path(global.mp_grid, path, x, y, _tx, _ty, false);
+	
+	if(can_move){
+		path_next_point = 1;
+	}
+}
+
+// Some detection stuff
+detection_radius = 50;
+vision_length = 50;
+shoot_radius = 30;
