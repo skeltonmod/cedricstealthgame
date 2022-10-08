@@ -6,9 +6,7 @@ grid_size = 16
 
 // this should broadcast to all enemies that the player is idle
 global.player_idle = false;
-
-
-
-global.mp_grid = mp_grid_create(0, 0, room_width, room_height, grid_size, grid_size);
+global.debug = true;
+global.mp_grid = mp_grid_create(0, 0, room_width / grid_size, room_height / grid_size, grid_size, grid_size);
 
 mp_grid_add_instances(global.mp_grid, static_parent, 0);

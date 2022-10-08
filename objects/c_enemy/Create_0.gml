@@ -7,7 +7,8 @@ py = 0;
 
 movable = true;
 move_timer = 0;
-pause_timer = 10;
+max_pause_timer = 120;
+pause_timer = max_pause_timer;
 min_move_time = 50;
 max_move_time = 100;
 move_radius = 128;
@@ -15,6 +16,14 @@ move_radius = 128;
 input_x = 0;
 input_y = 0;
 
+// Last seen position
+last_x = 0;
+last_y = 0;
+
+// needed for the gameplay to work
+alert_level = 0;
+
+// The state
 state = "WANDER";
 
 move_to_point = function (_tx, _ty, CELLSIZE = 32){
@@ -32,3 +41,5 @@ move_to_point = function (_tx, _ty, CELLSIZE = 32){
 
 // Some detection stuff
 detection_radius = 50;
+vision_length = 50;
+shoot_radius = 30;

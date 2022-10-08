@@ -1,9 +1,14 @@
 // follow AI Path
 
+if(alert_level == 1){
+	state = "CHASE";
+}
+
 if(collision_circle(x, y, detection_radius, c_cedric, false, true)){
 	if(!collision_line(x, y, c_cedric.x, c_cedric.y, static_parent, false, true)){
-		state = "CHASE";
+		state = "CHECKOUT";
 	}
+	
 }
 
 if(path_next_point > 0) {

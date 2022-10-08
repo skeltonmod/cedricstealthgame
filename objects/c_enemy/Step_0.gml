@@ -1,6 +1,13 @@
 switch(state){
 	case "IDLE":
 		// DO Nothing
+		movable = false;
+		pause_timer--;
+		if(pause_timer <= 0){
+			pause_timer = max_pause_timer;
+			movable = true;
+			state = "WANDER";
+		}
 	break
 	
 	case "WANDER":
@@ -24,5 +31,28 @@ switch(state){
 		move_to_point(c_cedric.x, c_cedric.y);
 	break;
 	
+	case "CHECKOUT":
+		last_x = c_cedric.x;
+		last_y = c_cedric.y;
+		direction = point_direction(x, y, last_x, last_y);
+		move_to_point(last_x, last_y);
+		state = "CHECKINGOUT";
+	break;
 	
+	case "CHECKINGOUT":
+		if(distance_to_point(last_x, last_y) <= 40){
+			last_x = 0;
+			last_y = 0;
+			state = "DISAPPOINTED";
+		}
+	break;
+	
+	// didn't find anything, disappointed in life
+	case "DISAPPOINTED":
+		pause_timer--;
+		if(pause_timer <= 0){
+			pause_timer = 30;
+			state = "WANDER";
+		}
+	break;
 }
