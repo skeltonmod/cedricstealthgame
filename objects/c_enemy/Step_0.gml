@@ -35,8 +35,14 @@ switch(state){
 		last_x = c_cedric.x;
 		last_y = c_cedric.y;
 		direction = point_direction(x, y, last_x, last_y);
-		move_to_point(last_x, last_y);
-		state = "CHECKINGOUT";
+		
+		if(pause_timer <= 0){
+			pause_timer = max_pause_timer;
+			move_to_point(last_x, last_y);
+			state = "CHECKINGOUT";
+		}else{
+			pause_timer--;
+		}
 	break;
 	
 	case "CHECKINGOUT":
@@ -51,8 +57,8 @@ switch(state){
 	case "DISAPPOINTED":
 		pause_timer--;
 		if(pause_timer <= 0){
-			pause_timer = 30;
-			state = "WANDER";
+			pause_timer = max_pause_timer;
+			state = "IDLE";
 		}
 	break;
 }
