@@ -21,7 +21,7 @@ if (draw_char < text_length){
 }
 
 if (skip_key){
-	if(draw_char == text_length[page]){
+	if(draw_char == text_length){
 		if (page < current_page - 1){
 			page++;
 			draw_char = 0;
