@@ -13,3 +13,10 @@ dir = 0;
 idle_time = 50;
 
 interact_range = 15;
+
+// Draw shit
+sub_image = 0;
+sprite_direction = 0;
+
+frame = 0;
+max_frames = 5;

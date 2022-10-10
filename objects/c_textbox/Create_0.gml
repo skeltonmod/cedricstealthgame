@@ -24,5 +24,4 @@ textbox_image = 0;
 textbox_image_speed = 6 / 60;
 
 
-depth = -999999999
-
+depth = -99999

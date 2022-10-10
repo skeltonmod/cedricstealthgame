@@ -20,6 +20,7 @@ else
 	y_vel = lengthdir_y(1.3, dir);
 }
 
+
 is_idle = bool(h == 0 && v == 0);
 if(place_meeting(x + x_vel, y, static_parent)){
 	while(!place_meeting(x + sign(x_vel), y, static_parent)){
@@ -28,6 +29,18 @@ if(place_meeting(x + x_vel, y, static_parent)){
 	
 	x_vel = 0;
 }
+sprite_direction = floor(dir / 45);
+
+if(!is_idle){
+	frame += 1;
+	if(frame >= 5){
+		frame = 0;
+	}
+}else{
+	frame = 0;
+}
+
+sub_image = frame + sprite_direction * 5;
 
 if(place_meeting(x, y + y_vel, static_parent)){
 	while(!place_meeting(x, y + sign(y_vel), static_parent)){

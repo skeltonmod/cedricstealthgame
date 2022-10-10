@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "c_cedric",
   "spriteId": {
-    "name": "s_placeholder",
-    "path": "sprites/s_placeholder/s_placeholder.yy",
+    "name": "s_player",
+    "path": "sprites/s_player/s_player.yy",
   },
   "solid": false,
   "visible": true,
