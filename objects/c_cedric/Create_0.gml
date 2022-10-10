@@ -11,3 +11,5 @@ dir = 0;
 
 // the meat of the game
 idle_time = 50;
+
+interact_range = 15;

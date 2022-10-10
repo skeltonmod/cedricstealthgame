@@ -43,3 +43,7 @@ move_to_point = function (_tx, _ty, CELLSIZE = 32){
 detection_radius = 50;
 vision_length = 50;
 shoot_radius = 30;
+
+// gameplay stuff
+hp = 100;
+

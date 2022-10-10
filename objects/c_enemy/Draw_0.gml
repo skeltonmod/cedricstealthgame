@@ -1,5 +1,5 @@
 draw_self();
-if(state != "WANDER"){
+if(last_x != 0 && last_y != 0){
 	draw_sprite_ext(s_placeholder, 0, last_x, last_y, image_xscale, image_yscale, 0, image_blend, 0.5);
 }
 if(global.debug){
