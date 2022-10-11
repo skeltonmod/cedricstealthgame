@@ -27,3 +27,4 @@ if(mouse_check_button(mb_left) && projectile_delay < 0 && is_idle){
 		speed = 4
 	}
 }
+

@@ -19,4 +19,7 @@ sub_image = 0;
 sprite_direction = 0;
 
 frame = 0;
-max_frames = 5;
+max_frames = 1;
+
+// aiming
+mouse_direction = 0;

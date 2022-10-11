@@ -31,16 +31,18 @@ if(place_meeting(x + x_vel, y, static_parent)){
 }
 sprite_direction = floor(dir / 45);
 
+mouse_direction = floor(point_direction(x, y, mouse_x, mouse_y) / 45);
+
 if(!is_idle){
 	frame += 1;
-	if(frame >= 5){
+	if(frame >= 1){
 		frame = 0;
 	}
 }else{
 	frame = 0;
 }
 
-sub_image = frame + sprite_direction * 5;
+sub_image = frame + sprite_direction * 1;
 
 if(place_meeting(x, y + y_vel, static_parent)){
 	while(!place_meeting(x, y + sign(y_vel), static_parent)){
