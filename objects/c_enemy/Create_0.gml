@@ -47,3 +47,10 @@ shoot_radius = 30;
 // gameplay stuff
 hp = 100;
 
+// animation stuff
+// Draw shit
+sub_image = 0;
+sprite_direction = 0;
+
+frame = 0;
+max_frames = 1;

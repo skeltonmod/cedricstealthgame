@@ -62,3 +62,20 @@ switch(state){
 		}
 	break;
 }
+
+
+	
+// handle the animation frames
+if(!movable){
+	frame += 1;
+	if(frame >= 1){
+		frame = 0;
+	}
+}else{
+	frame = 0;
+}
+
+sub_image = frame + sprite_direction * 1;
+
+sprite_direction = floor(direction / 45);
+

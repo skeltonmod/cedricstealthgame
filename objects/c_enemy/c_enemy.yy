@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "c_enemy",
   "spriteId": {
-    "name": "s_e_placeholder",
-    "path": "sprites/s_e_placeholder/s_e_placeholder.yy",
+    "name": "s_player",
+    "path": "sprites/s_player/s_player.yy",
   },
   "solid": false,
   "visible": true,
