@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "c_floor",
   "spriteId": {
-    "name": "s_floor_1",
-    "path": "sprites/s_floor_1/s_floor_1.yy",
+    "name": "s_floor_placeholder",
+    "path": "sprites/s_floor_placeholder/s_floor_placeholder.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,13 +24,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "utils",
-    "path": "folders/Objects/utils.yy",
+    "name": "static",
+    "path": "folders/Objects/static.yy",
   },
 }
