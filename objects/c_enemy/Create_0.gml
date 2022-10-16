@@ -24,7 +24,7 @@ last_y = 0;
 alert_level = 0;
 
 // The state
-state = "WANDER";
+state = "IDLE";
 
 move_to_point = function (_tx, _ty, CELLSIZE = 32){
 	_tx = floor(_tx / CELLSIZE) * CELLSIZE;
@@ -40,7 +40,7 @@ move_to_point = function (_tx, _ty, CELLSIZE = 32){
 }
 
 // Some detection stuff
-detection_radius = 50;
+detection_radius = 30;
 vision_length = 50;
 shoot_radius = 30;
 

@@ -6,8 +6,9 @@ if(path_next_point > 0 && x == px && y == py){
 	if(path_next_point >= path_get_number(path)){
 		path_next_point = 0
 	}
-	
-	if(state != "CHECKINGOUT"){
+	/*
+		if(state != "CHECKINGOUT" || state != "CHASE"){
 		state = "IDLE";
 	}
+	*/
 }

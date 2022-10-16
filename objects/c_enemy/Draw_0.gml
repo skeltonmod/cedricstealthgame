@@ -5,7 +5,7 @@ if(global.debug){
 	draw_path(path, 0, 0, 1);
 	draw_circle(x, y, detection_radius, true);
 
-	drawtext(x, y - 20, string(sprite_direction), -1, 320, font_1, 32);
+	drawtext(x, y - 20, string(state), -1, 320, font_1, 32);
 
 	// draw the vision cone
 	var get_line_x = x + lengthdir_x(vision_length, direction);

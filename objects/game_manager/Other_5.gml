@@ -1,0 +1,1 @@
+global.doom_timer = 60;

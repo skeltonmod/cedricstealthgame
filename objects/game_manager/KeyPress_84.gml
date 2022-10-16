@@ -1,1 +1,1 @@
-global.debug = !global.debug;
+room_restart();

@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "static_parent",
   "spriteId": null,
-  "solid": false,
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,

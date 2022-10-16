@@ -1,0 +1,1 @@
+instance_create_layer(x, y, "Effects", c_bullet_impact);

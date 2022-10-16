@@ -6,17 +6,17 @@ function generatefloor(){
 	instance_create_layer(x, y, "Solids", c_floor);
 	
 	if(random(2) < 1){
-		instance_create_layer(x+32,y, "Solids",c_floor)
-		instance_create_layer(x+32,y+32, "Solids",c_floor)
-		instance_create_layer(x,y+32, "Solids",c_floor)
+		instance_create_layer(x+16,y, "Solids",c_floor)
+		instance_create_layer(x+16,y+16, "Solids",c_floor)
+		instance_create_layer(x,y+16, "Solids",c_floor)
 	}
 	
-	turn = choose(0,0,0,0,0,0,0,0,0,90,-90,90,-90,180);
+	turn = choose(90,-90,90,-90,180);
 	
 	direction += turn;
 	
-	x += lengthdir_x(32, direction);
-	y += lengthdir_y(32, direction);
+	x += lengthdir_x(16, direction);
+	y += lengthdir_y(16, direction);
 	
 	instance_create_layer(x, y, "Solids", c_floor);
 	

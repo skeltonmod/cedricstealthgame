@@ -13,6 +13,7 @@ if (h == 0 && v == 0)
     x_vel = 0;
 	y_vel = 0;
 }
+
 else
 {
     dir = point_direction(0, 0, h, v);
@@ -29,6 +30,7 @@ if(place_meeting(x + x_vel, y, static_parent)){
 	
 	x_vel = 0;
 }
+
 sprite_direction = floor(dir / 45);
 
 mouse_direction = floor(point_direction(x, y, mouse_x, mouse_y) / 45);
@@ -52,6 +54,32 @@ if(place_meeting(x, y + y_vel, static_parent)){
 	y_vel = 0;
 }
 
+
+
+if(place_meeting(x, y, static_parent)) {
+	for(var i = 0; i < 1000; ++i) {
+		//Right
+		if(!place_meeting(x + i, y, static_parent)) {
+			x += i;
+			break;
+		}
+		//Left
+		if(!place_meeting(x - i, y, static_parent)) {
+			x -= i;
+			break;
+		}
+		//Up
+		if(!place_meeting(x, y - i, static_parent)) {
+			y -= i;
+			break;
+		}
+		//Down
+		if(!place_meeting(x, y + i, static_parent)) {
+			y += i;
+			break;
+		}
+	}
+}
 
 
 x += x_vel;

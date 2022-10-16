@@ -13,6 +13,9 @@ var _yy = y + lengthdir_y(10, _mouse_dir);
 
 //draw_line(x, y, _xx, _yy)
 
-draw_sprite(s_pistol, mouse_direction, _xx, _yy);
+draw_sprite(s_rifle, mouse_direction, _xx, _yy);
+
+// draw the doom timer
+//draw_text(x, y - 20, string(global.enemies_count))
 
 //draw_line_color(x, y, x + lengthdir_x(17, _mouse_dir), y + lengthdir_y(17, _mouse_dir), c_red, c_red);

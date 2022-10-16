@@ -2,8 +2,12 @@
 x_vel = 0;
 y_vel = 0;
 
+// some glitch effect
+abberation = 0.26;
+
+max_projectile_delay = 3;
 // Shooting cooldown lmao
-projectile_delay = 10;
+projectile_delay = max_projectile_delay;
 
 // State
 is_idle = true;

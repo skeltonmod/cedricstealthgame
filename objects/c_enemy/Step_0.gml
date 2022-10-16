@@ -74,8 +74,8 @@ if(!movable){
 }else{
 	frame = 0;
 }
-
+sprite_direction = floor(direction / 45);
 sub_image = frame + sprite_direction * 1;
 
-sprite_direction = floor(direction / 45);
+
 
