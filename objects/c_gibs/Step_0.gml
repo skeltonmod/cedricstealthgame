@@ -10,6 +10,7 @@ if(z <= 0){
 
 if(speed < 0){
 	speed = 0;
+	instance_destroy();
 }
 // Animate
 frame = type;

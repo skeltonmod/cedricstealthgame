@@ -1,0 +1,1 @@
+draw_sprite(sprite_index, floor(direction / 45), x, y);

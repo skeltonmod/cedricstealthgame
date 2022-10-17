@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "c_enemy_2",
   "spriteId": {
-    "name": "s_skull",
-    "path": "sprites/s_skull/s_skull.yy",
+    "name": "s_ogre",
+    "path": "sprites/s_ogre/s_ogre.yy",
   },
   "solid": false,
   "visible": true,

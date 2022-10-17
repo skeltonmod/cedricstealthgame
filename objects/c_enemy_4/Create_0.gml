@@ -1,5 +1,5 @@
 // behavior
-hp = 10;
+hp = 20;
 alarm[0] = 20+random(5)
 ammo = 0
 gunangle = random(360)

@@ -12,4 +12,8 @@ if(global.doom_timer <= 0){
 	global.doom_timer -= 0.4;
 }
 
-global.enemies_count = instance_number(enemy_parent);
+if(instance_number(level_manager) == 0){
+	if(instance_number(enemy_parent) > 0){
+		instance_create_layer(x, y, "Instances", level_manager);
+	}
+}

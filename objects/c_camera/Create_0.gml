@@ -1,10 +1,9 @@
-camera = view_camera[0];
-
-follow = c_cedric;
-
-w_half = camera_get_view_width(camera) / 2;
-h_half = camera_get_view_height(camera) / 2;
-
-x_to = xstart;
-y_to = ystart;
-
+// Camera settings
+shake = false;
+shake_time = 0;
+shake_magnitude = 0;
+shake_fade = 0.25;
+scroll_x_offset = 0
+scroll_y_offset = 0
+_xx = 0;
+_yy = 0;
